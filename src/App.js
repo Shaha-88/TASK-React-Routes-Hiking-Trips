@@ -1,15 +1,18 @@
-import './App.css';
-import Nav from './components/Nav';
-import Home from './components/Home';
-import TripsList from './components/TripsList';
-import TripDetail from './components/TripDetail';
+import "./App.css";
+import Nav from "./components/Nav";
+import Home from "./components/Home";
+import TripList from "./components/TripsList";
+import TripDetail from "./components/TripDetail";
+import { Outlet } from "react-router-dom";
+import React from "react";
 
 function App() {
   return (
-    <div id="page-top">
+    <div className="App">
       <Nav />
+      <Outlet />
       <Home />
-      <TripsList />
+      <TripList />
       <TripDetail />
     </div>
   );
